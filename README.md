@@ -12,8 +12,10 @@ import Foundation
 
 //...
 
+//Create cache with capacity
 var cache = SwiftlyLRU<String, Float>(capacity: 7)
 
+    //Add Key, Value pairs
     cache["AAPL"] = 114.63
     cache["GOOG"] = 533.75
     cache["YHOO"] = 50.67
