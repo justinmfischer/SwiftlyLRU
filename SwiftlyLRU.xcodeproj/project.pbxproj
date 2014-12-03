@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		583641491A2CC04700C1FBE4 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583641481A2CC04700C1FBE4 /* Node.swift */; };
-		5836414B1A2CC05500C1FBE4 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5836414A1A2CC05500C1FBE4 /* LinkedList.swift */; };
 		5836414D1A2CC06C00C1FBE4 /* SwiftlyLRU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5836414C1A2CC06C00C1FBE4 /* SwiftlyLRU.swift */; };
 		58F154A21A2CBFA8003F9D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F154A11A2CBFA8003F9D1A /* AppDelegate.swift */; };
 		58F154A41A2CBFA8003F9D1A /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F154A31A2CBFA8003F9D1A /* Example.swift */; };
@@ -18,8 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		583641481A2CC04700C1FBE4 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		5836414A1A2CC05500C1FBE4 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		5836414C1A2CC06C00C1FBE4 /* SwiftlyLRU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftlyLRU.swift; sourceTree = "<group>"; };
 		58F1549C1A2CBFA8003F9D1A /* SwiftlyLRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftlyLRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F154A01A2CBFA8003F9D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,8 +40,6 @@
 		583641471A2CC01500C1FBE4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				583641481A2CC04700C1FBE4 /* Node.swift */,
-				5836414A1A2CC05500C1FBE4 /* LinkedList.swift */,
 				5836414C1A2CC06C00C1FBE4 /* SwiftlyLRU.swift */,
 			);
 			path = Source;
@@ -159,10 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				583641491A2CC04700C1FBE4 /* Node.swift in Sources */,
 				58F154A41A2CBFA8003F9D1A /* Example.swift in Sources */,
 				5836414D1A2CC06C00C1FBE4 /* SwiftlyLRU.swift in Sources */,
-				5836414B1A2CC05500C1FBE4 /* LinkedList.swift in Sources */,
 				58F154A21A2CBFA8003F9D1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

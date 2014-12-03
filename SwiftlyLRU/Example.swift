@@ -29,15 +29,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var cache = SwiftlyLRU<String, Float>(capacity: 5)
-        
-        cache["AAPL"] = 115.21
-        cache["GOOG"] = 20.00
-        cache["YHOO"] = 10.09
-        cache["P"] = 2.67
-        cache["YELP"] = 50.56
-        cache["MSFT"] = 30.34
-        cache["TSLA"] = 100.89
+        var cache = SwiftlyLRU<String, Float>(capacity: 7)
+
+        cache["AAPL"] = 114.63
+        cache["GOOG"] = 533.75
+        cache["YHOO"] = 50.67
+        cache["TWTR"] = 38.91
+        cache["BABA"] = 109.89
+        cache["YELP"] = 55.17
+        cache["BABA"] = 109.80
+        cache["TSLA"] = 231.43
+        cache["AAPL"] = 113.41
+        cache["GOOG"] = 533.60
+        cache["AAPL"] = 113.01
         
         println(cache)
     }
