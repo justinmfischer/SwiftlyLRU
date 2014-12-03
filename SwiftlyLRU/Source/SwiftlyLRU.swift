@@ -46,7 +46,7 @@ class LinkedList<K, V> {
     }
     
     func addToHead(node: Node<K, V>) {
-        if(self.head == nil) {
+        if self.head == nil  {
             self.head = node
             self.tail = node
         } else {
@@ -59,15 +59,15 @@ class LinkedList<K, V> {
     }
     
     func remove(node: Node<K, V>) {
-        if(node === self.head) {
-            if(self.head?.next != nil) {
+        if node === self.head {
+            if self.head?.next != nil {
                 self.head = self.head?.next
                 self.head?.previous = nil
             } else {
                 self.head = nil
                 self.tail = nil
             }
-        } else if(node.next != nil) {
+        } else if node.next != nil {
             node.previous?.next = node.next
             node.next?.previous = node.previous
         } else {
