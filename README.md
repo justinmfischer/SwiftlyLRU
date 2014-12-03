@@ -42,8 +42,9 @@ var cache = SwiftlyLRU<String, Float>(capacity: 7)
 //...
 ```
 ##Instillation:
-Simply drag Swiftly.swift from the Source folder into your target project.
+Simply drag SwiftlyLRU.swift file from the Source folder into your target project.
 
 ##Reference Notes:
 
 ##Performance:
+Time: O(1), Space: O(1) assumes no collisions into the hashtable.
