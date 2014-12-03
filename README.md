@@ -28,7 +28,7 @@ var cache = SwiftlyLRU<String, Float>(capacity: 7)
     
     println(cache)
 
-/*
+/* OUTPUT
     SwiftlyLRU Cache(7) 
     Key: AAPL Value: Optional(113.01) 
     Key: GOOG Value: Optional(533.6) 
