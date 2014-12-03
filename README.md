@@ -40,5 +40,6 @@ var cache = SwiftlyLRU<String, Float>(capacity: 7)
     Key: TWTR Value: Optional(38.91) 
     Key: YHOO Value: Optional(50.67) 
 */
+
 //...
 ```
