@@ -45,6 +45,7 @@ var cache = SwiftlyLRU<String, Float>(capacity: 7)
 Simply drag SwiftlyLRU.swift file from the Source folder into your target project.
 
 ##Reference Notes:
+SwiftlyLRU uses generics and can store any value including nil as the value and keys that confirm to the Hashable protocol. Swift’s basic types (such as String, Int, Double, Float, and Bool) are hashable by default.
 
 ##Performance:
 Time: O(1), Space: O(1) assumes no collisions into the hashtable.
