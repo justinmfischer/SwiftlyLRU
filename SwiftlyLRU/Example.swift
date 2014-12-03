@@ -29,8 +29,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //Create cache with capacity
         var cache = SwiftlyLRU<String, Float>(capacity: 7)
-
+        
+        //Add Key, Value pairs
         cache["AAPL"] = 114.63
         cache["GOOG"] = 533.75
         cache["YHOO"] = 50.67
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
         cache["GOOG"] = 533.60
         cache["AAPL"] = 113.01
         
+        //Describe
         println(cache)
     }
 
