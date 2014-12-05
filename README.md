@@ -33,6 +33,10 @@ var cache = SwiftlyLRU<String, Float>(capacity: 7)
         println("Item not found.")
     }
     
+/* OUTPUT    
+    Key: AAPL Value: 113.01
+*/
+    
     //Describe
     println(cache)
 
