@@ -26,6 +26,13 @@ var cache = SwiftlyLRU<String, Float>(capacity: 7)
     cache["GOOG"] = 533.60
     cache["AAPL"] = 113.01
     
+    //Retrieve
+    if let item = cache["AAPL"] {
+        println("Key: AAPL Value: \(item)")
+    } else {
+        println("Item not found.")
+    }
+    
     //Describe
     println(cache)
 
