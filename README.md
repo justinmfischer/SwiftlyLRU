@@ -62,7 +62,7 @@ SwiftlyLRU uses generics and can store any value including nil as the value and 
 ##Performance:
 Time: O(1), Space: O(1) assumes no collisions into the hashtable.
 
-##NSCoding support
+##NSCoding support:
 Sebastian Bub created a nice wrapper that is NSCoding-compliant via the NSKeyedArchiver. Please checkout his project to support this behavior. https://github.com/sebbu/SwiftlyLRU
 
 ##Legal:
