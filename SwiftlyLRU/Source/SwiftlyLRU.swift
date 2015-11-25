@@ -50,7 +50,7 @@ class LinkedList<K, V> {
             self.head = node
             self.tail = node
         } else {
-            var temp = self.head
+            let temp = self.head
             
             self.head?.previous = node
             self.head = node
@@ -90,7 +90,7 @@ class LinkedList<K, V> {
 }
 
 
-class SwiftlyLRU<K : Hashable, V> : Printable {
+class SwiftlyLRU<K : Hashable, V> : CustomStringConvertible {
     
     let capacity: Int
     var length = 0
@@ -127,7 +127,7 @@ class SwiftlyLRU<K : Hashable, V> : Printable {
                 self.queue.remove(node)
                 self.queue.addToHead(node)
             } else {
-                var node = Node(key: key, value: value)
+                let node = Node(key: key, value: value)
                 
                 if self.length < capacity {
                     self.queue.addToHead(node)

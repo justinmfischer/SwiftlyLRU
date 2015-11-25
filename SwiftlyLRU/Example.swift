@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         //Create cache with capacity
-        var cache = SwiftlyLRU<String, Float>(capacity: 7)
+        let cache = SwiftlyLRU<String, Float>(capacity: 7)
         
         //Add Key, Value pairs
         cache["AAPL"] = 114.63
@@ -47,13 +47,13 @@ class ViewController: UIViewController {
         
         //Retrieve
         if let item = cache["AAPL"] {
-            println("Key: AAPL Value: \(item)")
+            print("Key: AAPL Value: \(item)")
         } else {
-            println("Item not found.")
+            print("Item not found.")
         }
         
         //Describe
-        println(cache)
+        print(cache)
     }
 
     override func didReceiveMemoryWarning() {
