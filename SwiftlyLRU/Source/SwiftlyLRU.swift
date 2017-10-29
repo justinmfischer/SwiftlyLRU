@@ -21,7 +21,6 @@
 //  Created by JUSTIN M FISCHER on 12/1/14.
 //  Copyright (c) 2013 Justin M Fischer. All rights reserved.
 //
-
 import Foundation
 
 class Node<K, V> {
@@ -99,8 +98,8 @@ class SwiftlyLRU<K : Hashable, V> : CustomStringConvertible {
     private var hashtable: [K : Node<K, V>]
     
     /**
-    Least Recently Used "LRU" Cache, capacity is the number of elements to keep in the Cache.
-    */
+     Least Recently Used "LRU" Cache, capacity is the number of elements to keep in the Cache.
+     */
     init(capacity: Int) {
         self.capacity = capacity
         
@@ -111,8 +110,8 @@ class SwiftlyLRU<K : Hashable, V> : CustomStringConvertible {
     subscript (key: K) -> V? {
         get {
             if let node = self.hashtable[key] {
-                self.queue.remove(node)
-                self.queue.addToHead(node)
+                self.queue.remove(node: node)
+                self.queue.addToHead(node: node)
                 
                 return node.value
             } else {
@@ -124,31 +123,31 @@ class SwiftlyLRU<K : Hashable, V> : CustomStringConvertible {
             if let node = self.hashtable[key] {
                 node.value = value
                 
-                self.queue.remove(node)
-                self.queue.addToHead(node)
+                self.queue.remove(node: node)
+                self.queue.addToHead(node: node)
             } else {
                 let node = Node(key: key, value: value)
                 
                 if self.length < capacity {
-                    self.queue.addToHead(node)
+                    self.queue.addToHead(node: node)
                     self.hashtable[key] = node
                     
-                    self.length++
+                    self.length = self.length + 1
                 } else {
-                    hashtable.removeValueForKey(self.queue.tail!.key)
+                    hashtable.removeValue(forKey: self.queue.tail!.key)
                     self.queue.tail = self.queue.tail?.previous
                     
                     if let node = self.queue.tail {
                         node.next = nil
                     }
                     
-                    self.queue.addToHead(node)
+                    self.queue.addToHead(node: node)
                     self.hashtable[key] = node
                 }
             }
         }
     }
-        
+    
     var description : String {
         return "SwiftlyLRU Cache(\(self.length)) \n" + self.queue.display()
     }
