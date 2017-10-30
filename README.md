@@ -1,4 +1,4 @@
-SwiftlyLRU Swift 4.0 Syntax
+SwiftlyLRU Swift 4.0 Xcode 9
 ==========
 
 ```swift
