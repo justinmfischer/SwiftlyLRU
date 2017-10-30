@@ -1,4 +1,4 @@
-SwiftlyLRU
+SwiftlyLRU Swift 4.0 Syntax
 ==========
 
 ```swift
