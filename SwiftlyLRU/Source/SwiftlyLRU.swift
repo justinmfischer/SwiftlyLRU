@@ -25,7 +25,7 @@ import Foundation
 
 class Node<K, V> {
     var next: Node?
-    var previous: Node?
+    weak var previous: Node?
     var key: K
     var value: V?
     
@@ -69,6 +69,9 @@ class LinkedList<K, V> {
         } else if node.next != nil {
             node.previous?.next = node.next
             node.next?.previous = node.previous
+            //we must remove references to avoid reference cycles
+            node.next = nil
+            node.previous = nil
         } else {
             node.previous?.next = nil
             self.tail = node.previous
@@ -135,6 +138,10 @@ class SwiftlyLRU<K : Hashable, V> : CustomStringConvertible {
                     self.length = self.length + 1
                 } else {
                     hashtable.removeValue(forKey: self.queue.tail!.key)
+                    
+                    //we must remove tail not just references to avoid reference cycles
+                    self.queue.remove(node: self.queue.tail!)
+
                     self.queue.tail = self.queue.tail?.previous
                     
                     if let node = self.queue.tail {
